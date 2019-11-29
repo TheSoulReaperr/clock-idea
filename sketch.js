@@ -4,6 +4,11 @@ function setup() {
   w = windowWidth;
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth,200);
+  w = windowWidth;
+}
+
 function draw() {
   background(0);
   let hours = hour();
@@ -41,9 +46,4 @@ function draw() {
     x += w/12;
   }
   line(w,0,w,200);
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth,200);
-  w = windowWidth;
 }
